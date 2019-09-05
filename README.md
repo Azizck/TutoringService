@@ -1,6 +1,6 @@
 # TutoringService
 
-[![Watch the video](https://azizck.github.io/TutoringService/mockup/main.jpg)](https://youtu.be/TCXrVHWx8t4)
+[![Watch the video](https://azizck.github.io/TutoringService/mockup/mockup.jpg)](https://youtu.be/TCXrVHWx8t4)
 
  <sub><sup>
  Languages used: 
