@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<link
+	href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+	rel="stylesheet">
+<style>
+body {
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+}
+
+a {
+	padding: 22px;
+	margin: 25px;
+	background: #8BC34A;
+	display: inline-block;
+	font-size: 2em;
+	color: white;
+	text-decoration: none;
+}
+input[type="submit"]{
+    background: #9E9E9E;
+    padding: 11px;
+    font-size: 1.4em;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    border: none;
+    margin: 12px;
+}
+
+</style>
+<meta charset="ISO-8859-1">
+<title>Access Denied</title>
+</head>
+<body>
+	<h2>Are you sure you should be browsing this page ?</h2>
+	<div>
+		<a href="/" th:href="@{/}"> go Home </a>
+	</div>
+
+	Try logging out and loggin in again ?
+	<form action="#" th:action="@{/logout}" method="post">
+		<input type="submit" value="Logout" />
+	</form>
+	<h1></h1>
+</body>
+</html>

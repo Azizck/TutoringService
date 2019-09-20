@@ -1,0 +1,88 @@
+body {
+	background: #e1dede;
+}
+
+header {
+	background-color: #e8e8e8;
+}
+
+h1 {
+	margin: 20px;
+}
+h2 {
+	text-align: center;
+	font-family: 'DM Serif Text', serif;
+}
+
+p {
+	margin: auto;
+	display: block;
+}
+
+header>div {
+	display: inline-block;
+	margin: 10px;
+}
+
+button {
+	margin: 20px;
+	background-color: green;
+	padding: 20px;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	font-size: 1.2em;
+}
+
+button:hover {
+	background-color: yellow;
+}
+
+input[type="submit"] {
+	margin: 20px;
+    padding: 13px;
+    border: none;
+    display: inline;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.2em;
+    background-color: green;
+}
+input[type="submit"]:hover {
+	background-color: yellow;
+}
+.formStyle {
+	font-size: 20px;
+	text-align: center;
+}
+a {
+	color: white;
+	text-decoration: none;
+	margin: 20px;
+	background-color: #b29fd1;
+	padding: 20px;
+	border: none;
+	border-radius: 20px;
+	font-size: 1.2em;
+}
+.logOutButton {
+	display: inline-block;
+    background-color: #b29fd1 !important;
+}
+.cancelOrder {
+    background-color: #ea8e1c !important;
+    padding: 12px;
+    border: none;
+    display: inline !important;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+.cancelOrder:hover {
+	background-color: red !important;
+}
+.twoButtons {
+	display: flex;
+    justify-content: center;
+}

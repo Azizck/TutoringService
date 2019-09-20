@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" th:href="@{css/cssCalendar.css}">
+<head>
+<meta charset="ISO-8859-1">
+<title>test</title>
+</head>
+<body>
+
+	<h1>Calendar</h1>
+	<form action="calendar">
+		<input type="date" name="date" th:value="${date}"> <input
+			type="submit">
+	</form>
+
+
+	<div id="joinTables">
+		<table>
+			<tr>
+				<td>--</td>
+			</tr>
+			<tr class="days-th" th:each="d : ${days} ">
+				<td th:text="${d}"></td>
+			</tr>
+
+
+		</table>
+		<table class="table">
+			<tr class="work-hours">
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+			</tr>
+
+			<tr class="mod" th:each="h : ${hours}">
+				<td class="8" th:text="${h[0]}">none</td>
+				<td class="9" th:text="${h[1]}">none</td>
+				<td class="10" th:text="${h[2]}">none</td>
+				<td class="11" th:text="${h[3]}">none</td>
+				<td class="12" th:text="${h[4]}">none</td>
+				<td class="13" th:text="${h[5]}">none</td>
+				<td class="14" th:text="${h[6]}">none</td>
+				<td class="15" th:text="${h[7]}">none</td>
+				<td class="16" th:text="${h[8]}">none</td>
+				<td class="17" th:text="${h[9]}">none</td>
+				<td class="18" th:text="${h[10]}">none</td>
+				<td class="19" th:text="${h[11]}">none</td>
+			</tr>
+		</table>
+
+	</div>
+	<script>
+		for (var i = 0; i < 8; i++) {
+			document.getElementsByClassName("mod")[i]
+			for (var x = 0; x < 12; x++) {
+				if (document.getElementsByClassName("mod")[i].children[x].innerHTML != 0) {
+
+					document.getElementsByClassName("mod")[i].children[x].style.backgroundColor = '#ff7c33';
+
+				}
+
+			}
+
+		};
+	</script>
+</body>
+
+</html>

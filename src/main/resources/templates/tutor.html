@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tutoring Service</title>
+<link
+	href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" th:href="@{css/cssTutor.css}">
+</head>
+<body>
+	<!--  th:text="${session.name" -->
+	<h1>
+		Hey <span th:text="${session.name}">Jack!</span>
+
+	</h1>
+	<form action="addTutor">
+		<h3>What subject would you like to teach?</h3>
+		<div>
+			<input type="name" name="subject1" placeholder="e.g Java"> <input
+				type="name" name="subject2" placeholder="e.g PHP"> <br>
+			<input type="name" name="subject3" placeholder="e.g React.js">
+			<input type="name" name="subject4" placeholder="e.g Java Swing">
+			<br> <input type="name" name="subject5"
+				placeholder="e.g REST API"> <input type="name"
+				name="subject6" placeholder="e.g. graph QL"> <br>
+			Between : <input type="date" name="min"> <input type="date"
+				name="max"> <br>Define Price Per Hour: <input type="number"
+				name="pricePerHour" placeholder="e.g. 25">
+
+			<div class="add-cont">
+				<input class="add" type="submit" value="Add">
+			</div>
+
+			<div class="nav">
+				<a href="/calendar"> Show Calendar </a> <a href="/showDashboard">
+					Show your Appointments </a>
+			</div>
+
+			<img src="img/chalkboard.png">
+</body>
+</html>

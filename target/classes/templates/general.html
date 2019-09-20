@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" type="text/css" th:href="@{css/cssGeneral.css}">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<title>Welcome Page</title>
+</head>
+<body>
+	<header> 
+		<div><a href="login">Login</a></div>
+		<div><a href="/register">Sign Up</a></div>
+	</header>
+	<h1><i style='font-size:24px' class='fas'>&#xf19d;</i> Welcome to Elite Tutoring Services! <i style='font-size:24px' class='fas'>&#xf19d;</i></h1>
+	<div class="div1">
+	<h2>&nbsp;&nbsp; About Me <i style='font-size:24px' class='fas'>&#xf51c;</i></h2>
+	<p>
+		Hello and welcome to my tutoring page! My name is John Smith.<br> 
+		I have been tutoring for the last decade of my life.<br>
+		I look forward to helping you achieve your academic dreams.<br>
+	</p>
+	</div>
+	<div class="div2">
+	<h3>Why Book a Class with Me? <i style='font-size:24px' class='fas'>&#xf5fc;</i></h3>
+		<ul>
+			<li>10+ years of tutoring experience.</li>
+			<li>ability to simply concepts.</li>
+			<li>Fun and engaging classes.</li>
+			<li>Very patient!</li>
+		</ul>
+	</div>
+	<img src="img/tutor.jpg" width="300px">
+	<br>
+	<button><a href="/page1">Book an Appointment</a></button>
+	<button><a href="studentDashboard">Students Dashboard</a></button>
+	<button><a href="/showTutor">Tutors Dashboard</a></button>
+</body>
+</html>

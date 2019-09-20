@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+<link
+	href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+	rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/main.css" th:href="@{/css/cssRegister.css}">
+<meta charset="ISO-8859-1">
+
+<title>LOGIN</title>
+
+</head>
+<!-- LOGIN HTML  -->
+<body>
+	<h1>Register Page</h1>
+				<form action="#" th:action="@{/register}" method="POST">
+				user name:
+		<input type="text" id="username" name="username" autofocus="autofocus" placeholder="User Name"> 
+			password: <input type="password" id="password" name="password" palceholder="password">
+		 <br> <br>Are you Tutor? <input type="radio" name="role" value="admin">
+		<br>Are you student? <input type="radio" name="role" value="student" checked> 
+		<br>
+		<input type="submit" value="Sign Up">
+	</form>
+	<a href="/login" th:href="@{/login}">Already have an account, Sign in ! </a>
+</body>
+</html>

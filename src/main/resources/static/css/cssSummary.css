@@ -1,0 +1,96 @@
+body {
+	background: #e1dede;
+}
+
+header {
+	background-color: #e8e8e8;
+}
+
+img, p, h1 {
+	margin: 20px;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Lexend Exa', sans-serif;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Merriweather', sans-serif;
+}
+
+header>div {
+	display: inline-block;
+	padding: 20px;
+	margin: 10px;
+	background-color: #b29fd1;
+}
+
+button {
+	margin: 20px;
+	background-color: green;
+	padding: 20px;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	font-size: 1.2em;
+}
+
+button:hover {
+	background-color: yellow;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+input[type="submit"] {
+	margin: 20px;
+	background-color: green;
+	padding: 20px;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	font-size: 1.2em;
+}
+
+table {
+	font-weight: bold;
+	font-size: 24px;
+	font-family: 'Merriweather', serif;
+}
+
+.cancelButton {
+	margin: 20px;
+	background-color: #f44336;
+	padding: 20px;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	font-size: 1.2em;
+}
+
+.cancelButton:hover {
+	background-color: yellow;
+}
+
+td {
+	border: 1px solid #87CEFA;
+}
+
+p{
+    padding: 10px;
+    background: #646361;
+    color: white;
+}
+.button-cont{
+    display: flex;
+    background-color: #a98e8e00;
+    justify-content: center;
+}
+.edit{
+	background-color:#cddc39;		
+	
+}

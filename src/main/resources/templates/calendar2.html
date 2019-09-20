@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" th:href="@{css/cssCalendar2.css}">
+<title>test</title>
+</head>
+<body>
+	<h1>Calendar</h1>
+	<form action="prBooking">
+		<input type="date" name="date" th:value="${date}"
+			th:min="${session.min}" th:max="${session.max}"> 
+			<input type="text" class="time" value="" name="time" placeholder="time" readonly required> <br>
+			 <input type="submit">
+
+	</form>
+	<form name="refresh" action="showBooking">
+		<input type="hidden" name="date" value=""> <input
+			class="button" type="submit" value="Refersh Calendar">
+	</form>
+
+	Please click on the prfered time slot: 
+	<div id="joinTables">
+		<table class="table">
+			<tr>
+			</tr>
+			<td>---</td>
+			</tr>
+			<tr>
+				<td th:text="${day}"></td>
+			</tr>
+		</table>
+		<table>
+			<tr class="work-hours">
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+			</tr>
+			<tr class="mod">
+				<td class="8" th:text="${h[0]}">none</td>
+				<td class="9" th:text="${h[1]}">none</td>
+				<td class="10" th:text="${h[2]}">none</td>
+				<td class="11" th:text="${h[3]}">none</td>
+				<td class="12" th:text="${h[4]}">none</td>
+				<td class="13" th:text="${h[5]}">none</td>
+				<td class="14" th:text="${h[6]}">none</td>
+				<td class="15" th:text="${h[7]}">none</td>
+				<td class="16" th:text="${h[8]}">none</td>
+				<td class="17" th:text="${h[9]}">none</td>
+				<td class="18" th:text="${h[10]}">none</td>
+				<td class="19" th:text="${h[11]}">none</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="timeSlots">
+	 :<span>Booked</span> Available:<span></span></div>	
+	<script>
+		for (var x = 0; x < 12; x++) {
+			if (document.getElementsByClassName("mod")[0].children[x].innerHTML != 0) {
+				document.getElementsByClassName("mod")[0].children[x].style.backgroundColor = '#ff7c33';
+			}
+		}
+		document.getElementsByClassName("mod")[0].onclick = function(event) {
+			console.log(event.target.className);
+			if (event.target.innerHTML == 0) {
+				document.forms[0][1].value = event.target.className;
+			}
+		}
+		document.forms[0][0].onclick = function(event) {
+			document.forms[0][1].value = null;
+		}
+		// value of date in second form equal to value of first form 
+		document.forms["refresh"][1].onclick = function(event) {
+			document.forms["refresh"][0].value = document.forms[0][0].value;
+		};
+	</script>
+</body>
+</html>

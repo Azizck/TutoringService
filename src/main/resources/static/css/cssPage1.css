@@ -1,0 +1,64 @@
+body {
+	background: #e1dede;
+}
+
+header {
+	background-color: #e8e8e8;
+}
+
+p, h1 {
+	margin: 20px;
+	text-align: center;
+}
+
+header>div {
+	display: inline-block;
+	padding: 20px;
+	margin: 10px;
+	background-color: #b29fd1;
+}
+
+button {
+	margin: 20px;
+	background-color: #451c194a;
+	padding: 20px;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	font-size: 1.2em;
+}
+
+button:hover {
+	background-color: yellow;
+}
+.buttonStyle {
+	text-align: center;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+input[type="submit"] {
+	margin: 20px;
+	color: blue;
+	padding: 30px;
+	background: gray;
+	font-size: 20px;
+	border: none;
+}
+
+input[type="submit"]:hover {
+	background-color: yellow;
+}
+
+input[type="date"] {
+	margin: 20px;
+	font-size: 20px;
+}
+
+form {
+	display: inline-block;
+	text-align: center;
+}

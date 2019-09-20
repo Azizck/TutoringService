@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{css/cssPage2.css}">
+<title>Book Your Class</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link
+	href="https://fonts.googleapis.com/css?family=Eczar|Goudy+Bookletter+1911|Merriweather|Vidaloka&display=swap"
+	rel="stylesheet">
+<title>Book Your Class</title>
+</head>
+<body>
+	<header>
+		<div>
+			<a href="login">Login</a>
+		</div>
+		<div>
+			<a href="/register">Sign Up</a>
+		</div>
+	</header>
+	<h1>
+		<i style='font-size: 24px' class='fas'>&#xf044;</i> Book Your Class <i
+			style='font-size: 24px' class='far'>&#xf0c7;</i>
+	</h1>
+	<h2>
+		<i style='font-size: 24px' class='fas'>&#xf017;</i> When would you
+		like to have your class?
+	</h2>
+	<form action="book2">
+
+		<input type="number" name="time" min="0" max="24" step="1" value="10"
+			readonly> <input type="date" name="date" value="2018-06-12"
+			readonly> <br>
+		<h4>
+			<i style='font-size: 18px' class='fas'>&#xf252;</i> Class Duration:
+		</h4>
+		One Hour: <input type="radio" name="duration" value="1"
+			checked="checked"> <br> <br> <span><i
+			style='font-size: 20px' class='far'>&#xf15c;</i> Notes for the Tutor:
+		</span> <br>
+		<textarea th:text="${session.appt.notes}" rows="4" cols="50"
+			name="notes">
+			
+        </textarea>
+		<br>
+		<div>
+			Modify Subject: <select name="subject"
+				th:value="${session.appt.subject}">
+				<option th:each="s : ${session.subjects} " th:text="${s}"></option>
+			</select>
+		</div>
+
+
+
+		<p>
+			<i style='font-size: 18px' class='fas'>&#xf155;</i> Amount Due: <input
+				type="text" name="fee" th:value="${session.appt.fee}" readonly>
+		</p>
+		<br> <input type="submit" name="Confirm Your Order"
+			value="Confirm Your Order">
+		<button class="cancelButton">
+			<a href="/cancel">Cancel</a>
+		</button>
+	</form>
+	<img src="img/pileBooks.jpg">
+</body>
+</html>

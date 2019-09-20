@@ -1,0 +1,63 @@
+td {
+	background-color: #CDDC39;
+	padding: 20px;
+	padding: 20px;
+	width: 80px;
+}
+
+th {
+	background-color: gray;
+	padding: 20px;
+	padding: 20px;
+	width: 80px;
+}
+
+.mod {
+	color: lightblue;
+}
+
+.days-th>td {
+	background-color: gray;
+}
+
+#joinTables {
+	display: flex;
+}
+
+.work-hours>td {
+	background-color: lightgray;
+}
+
+input[type="submit"] {
+	background-color: green;
+	border-radius: 20px;
+	border: none;
+	color: white;
+	display: block;
+	margin: 5px 10%;
+	padding: 15px;
+}
+
+input[type="submit"]:hover {
+	background-color: yellow;
+}
+
+.button {
+	margin: 1px !important;
+	background: #7994bd !important;
+	padding: 15px !important;
+}
+
+.button:hover {
+	background-color: yellow;
+}
+
+.time {
+	width: 40px;
+}
+.mod > td{
+	color:#cddc3900;
+}
+.mod > td:hover{
+	background-color:#6d756e;	
+}

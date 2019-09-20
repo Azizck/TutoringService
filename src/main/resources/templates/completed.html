@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" th:href="@{css/cssCompleted.css}">
+<title>Payment Completed</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+	<header>
+		<div>
+			<a href="/">Home</a>
+		</div>
+		<div>
+			<form action="#" th:action="@{/logout}" method="post">
+				<input class="logOutButton" type="submit" value="Logout" />
+			</form>
+		</div>
+	</header>
+	<h1>
+		<i style='font-size: 24px' class='fas'>&#xf518;</i> Congratulation!
+		Your Class has been Booked! <i style='font-size: 24px' class='fas'>&#xf581;</i>
+	</h1>
+	<h2>
+		We look forward to seeing you on: <span th:text="${session.appt.date}">
+		</span>
+	</h2>
+	<br>
+	<h2 class="timeStyle">Please Log in to your Dashboard at least 5
+		minutes before class begins!</h2>
+	<br>
+	<a href="/studentDashboard" class="goDash">Go to Dash Board</a>
+</body>
+</html>

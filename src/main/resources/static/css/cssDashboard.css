@@ -1,0 +1,79 @@
+header {
+	background-color: #e8e8e8;
+}
+
+header>div {
+	display: inline-block;
+	padding: 20px;
+	margin: 10px;
+	background-color: #b29fd1;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	margin: 20px;
+	background-color: #b29fd1;
+	padding: 20px;
+	border: none;
+	border-radius: 20px;
+	font-size: 1.2em;
+}
+
+.main {
+	display: flex;
+}
+
+.container>div {
+	background-color: white;
+	padding: 20px;
+	margin: 10px;
+	font-family: "Lucida Console", Times, serif;
+	font-weight: bold;
+}
+
+h1 {
+	text-align: center;
+}
+
+.cancel {
+	color: black;
+	padding: 10px;
+	background-color: #4a563c;
+}
+
+.cancel:hover {
+	background-color: red;
+}
+
+#main {
+	position: relative;
+}
+
+div#second {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.container {
+	background-color: #4a563c;
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+	width: 63%;
+}
+
+.logOutButton {
+	display: inline-block;
+	background-color: #b29fd1 !important;
+	border: none;
+	color: white;
+}
+
+.logOutButton {
+	display: inline-block;
+	background-color: #b29fd1 !important;
+	border: none;
+	color: white;
+}

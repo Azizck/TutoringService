@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bookings</title>
+<link rel="stylesheet" type="text/css" th:href="@{css/cssDashboard.css}">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+	<div id="main">
+		<header>
+			<header>
+				<div>
+					<a href="/">Home</a>
+				</div>
+
+				<div>
+					<form action="#" th:action="@{/logout}" method="post">
+						<input class="logOutButton" type="submit" value="Logout" />
+					</form>
+				</div>
+			</header>
+		</header>
+		<h1>
+			<i style='font-size: 24px' class='fas'>&#xf501;</i> Your Bookings <i
+				style='font-size: 24px' class='far'>&#xf073;</i>
+		</h1>
+
+		<div id="second">
+			<div class="container" th:each="appt : ${appts}">
+				<div>
+					<i style="font-size: 24px" class="fa">&#xf02d;</i> Subject:<span
+						th:text="${appt.subject}"></span>
+				</div>
+				<div>
+					<i style='font-size: 24px' class='far'>&#xf271;</i> Date :<span
+						th:text="${appt.date}">
+				</div>
+				<div>
+					<i style='font-size: 24px' class='far'>&#xf017;</i> At:<span
+						th:text="${appt.time}">
+				</div>
+				<div>
+					<i style='font-size: 24px' class='far'>&#xf3d1;</i> Fee:<span
+						th:text="${appt.fee}">
+				</div>
+				<p class="cancel">
+					<a href="" th:href="@{/dellink/{id}(id=${appt.appt_id})}">DELETE</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

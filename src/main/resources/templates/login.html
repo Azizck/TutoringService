@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+<link
+	href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/main.css" th:href="@{/css/cssLogin.css}">
+<meta charset="ISO-8859-1">
+<title>LOGIN</title>
+</head>
+<!-- LOGIN HTML  -->
+<body>
+	<h1>login page</h1>
+	<div class="alert" th:if="${param.error}">invalid password or
+		User name</div>
+	<div class="alert" th:if="${param.logout}"></div>
+	<form th:action="@{/login}" method="POST">
+		user name:<input type="text" id="username" name="username"
+			autofocus="autofocus" placeholder="User Name"> <br>password:<input
+			type="password" id="password" name="password" palceholder="password">
+		<br> <input type="submit" name="login-submit" id="login-submit"
+			value="Log In">
+
+	</form>
+	<a href="/register" th:href="@{/register}">Don't have an account? sign up ! </a>
+
+</body>
+</html>

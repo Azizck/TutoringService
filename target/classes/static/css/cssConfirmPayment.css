@@ -1,0 +1,65 @@
+body {
+	background: #e1dede;
+}
+
+header {
+	background-color: #e8e8e8;
+}
+
+h2 {
+	text-align: center;
+}
+
+header>div {
+	display: inline-block;
+	margin: 10px;
+}
+
+.confirm {
+	margin: 20px 22em;
+	background-color: green !important;
+	padding: 20px;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	font-size: 1.2em;
+	text-align: center;
+	display: block;
+}
+
+input[type="submit"] {
+	margin: 20px;
+	padding: 20px;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	font-size: 1.2em;
+	background-color: green;
+}
+
+button:hover {
+	background-color: yellow;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	margin: 20px;
+	background-color: #b29fd1;
+	padding: 20px;
+	border: none;
+	border-radius: 20px;
+	font-size: 1.2em;
+}
+
+img, Button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.logOutButton {
+	display: inline-block;
+    background-color: #b29fd1 !important;
+}

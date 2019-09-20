@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table>
+<tr>
+<th>Name</th>
+<th>Main</th>
+<th>Amount</th>
+<th>Second Main</th>
+</tr>
+
+<tr th:each="contact: ${contacts}" >
+<td th:text="${contact.name}">
+<td th:text="${contact.address}">
+<td th:text="${contact.phoneNumber}">
+<td th:text="${contact.email}">
+</tr>
+
+
+</table>
+</body>
+</html>

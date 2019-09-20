@@ -1,0 +1,33 @@
+td {
+	background-color: #CDDC39;
+	padding: 20px;
+	padding: 20px;
+	width: 80px;
+}
+
+th {
+	background-color: gray;
+	padding: 20px;
+	padding: 20px;
+	width: 80px;
+}
+
+.mod {
+	color: lightblue;
+}
+
+.days-th>td {
+	background-color: gray;
+}
+
+#joinTables {
+	display: flex;
+}
+
+.work-hours>td {
+	background-color: lightgray;
+}
+
+.mod > td{
+	color:#cddc3900;
+}

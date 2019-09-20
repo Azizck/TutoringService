@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" href="css/cssSummary.css">
+<link
+	href="https://fonts.googleapis.com/css?family=Lexend+Deca|Lexend+Exa|Merriweather&display=swap"
+	rel="stylesheet">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<title>Order Confirmation</title>
+</head>
+<body>
+	<header>
+		<div>
+			<a href="login">Login</a>
+		</div>
+		<div>
+			<a href="/register">Sign Up</a>
+		</div>
+	</header>
+	<h1>
+		<i style='font-size: 24px' class='far'>&#xf0f3;</i> Order Confirmation
+		<i style='font-size: 24px' class='far'>&#xf15b;</i>
+	</h1>
+	<h2>Please review your order before you proceed to payment:</h2>
+
+	<p class="one">
+		Subject Chosen:<span th:text="${session.appt.subject}">PHP</span>
+	</p>
+
+	<p class="two">
+		Date of Appointment:<span th:text="${session.appt.date}"></span>
+	</p>
+
+		<p class="three">Duration: 1 hour</p>
+		<p class="four"> Fees: <span th:text="${session.appt.fee}"> </span>$
+		</p>
+
+		<p class="five">
+			Session Notes: <span th:text="${session.appt.notes}"> </span>
+		</p>	
+
+<div class="button-cont">
+	<button class="edit">
+		<a href="/modify">Edit Order</a>
+	</button>
+	<button>
+		<a href="/showPayment">Proceed to Payment</a>
+	</button>
+
+	<button class="cancelButton">
+		<a href="/cancel">Cancel</a>
+	</button>
+	</div>
+	<img src="img/bricksClass.jpg">
+</body>
+</html>

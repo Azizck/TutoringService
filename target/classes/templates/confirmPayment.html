@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{css/cssConfirmPayment.css}">
+</head>
+<body>
+	<header>
+		<div>
+			<a href="/">Home</a>
+		</div>
+		<div>
+			<form action="#" th:action="@{/logout}" method="post">
+				<input class="logOutButton" type="submit" value="Logout" />
+			</form>
+		</div>
+	</header>
+	<h2>  
+	Please confirm for your appointment on: 
+	<span th:text="${session.appt.date}"> </span>
+	At:
+	<span th:text="${session.appt.time}"> </span>
+	
+	</h2>
+	<h2>  
+	This amount will be paid:	
+	<span th:text="${session.appt.fee}"> </span></h2>
+	<br>
+	<a href="/submitAppt" class="confirm">Confirm</a>
+	<br>
+	<br>
+	
+	<img src="img/secure-checkout.png" width="500px">
+
+</body>
+</html>
